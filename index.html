@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeRivals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- firebase backend... -->
+    <script type="module" src="register.js" defer></script>
+    <script type="module" src="login.js" defer></script>
+    <script type="module" src="logout.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="title" id="bgcol">
+          <p id="bgcol">TypeRivals</p>
+        </div>
+
+        <button class="friends navbtn navflexx" id="bgcol">
+          <i class="fa-solid fa-heart-circle-check" id="bgcol"></i>
+          <p style="padding-left: 5px" id="bgcol">Your Friends</p>
+        </button>
+
+        <button class="leaderboard navbtn navflexx" id="bgcol">
+          <i class="fa-brands fa-web-awesome" id="bgcol"></i>
+          <p style="padding-left: 5px" id="bgcol">Leaderboards</p>
+        </button>
+
+        <div class="searchbar navflexx" id="bgcol">
+          <i class="fa-solid fa-magnifying-glass" id="bgcol"></i>
+          <input placeholder="Search for your Friends" class="navSearchIn" />
+        </div>
+
+        <div class="yourProfile navflexx" id="bgcol">
+          <p id="bgcol">Your Profile</p>
+          <div class="profilePic"></div>
+        </div>
+      </div>
+      <div class="next-bar" id="login">
+        <button class="next-bar loginBtn heheHidd1 modal-trigger1">
+          User logIn
+        </button>
+        <div class="separation"></div>
+        <button class="next-bar loginBtn heheHidd2 modal-trigger2">
+          SignUp
+        </button>
+        <div class="separation logOutHidden1" style="display: none"></div>
+        <button
+          class="next-bar loginBtn logOuttt logOutHidden2"
+          style="display: flex"
+        >
+          LogOut
+        </button>
+      </div>
+      <!-- SignUpMODAL -->
+      <div class="modal" id="modal2">
+        <div class="modal-content1" style="text-align: center">
+          <div class="ghusedoSabKuch">
+            <div class="cross"><span class="close">&times;</span></div>
+            <br /><br />
+            <h4
+              style="font-family: 'Times New Roman', Times, serif"
+              class="SignupText"
+            >
+              Signup
+            </h4>
+            <input
+              class="inputOff"
+              type="firstN"
+              id="firstN"
+              placeholder="enter your first name"
+              style="font-family: 'Times New Roman', Times, serif"
+            /><br /><br />
+            <input
+              class="inputOff"
+              type="lastN"
+              id="lastN"
+              placeholder="enter your last name"
+              style="font-family: 'Times New Roman', Times, serif"
+            /><br /><br />
+            <input
+              class="inputOff"
+              type="email"
+              id="signupEmail"
+              placeholder="enter your email"
+              style="font-family: 'Times New Roman', Times, serif"
+            /><br /><br />
+            <input
+              class="inputOff"
+              type="password"
+              id="signupPassword"
+              placeholder="enter your password"
+              style="font-family: 'Times New Roman', Times, serif"
+            /><br /><br /><br /><br /><br /><br />
+            <button
+              class="btnsub submit2"
+              type="submit"
+              style="font-family: 'Times New Roman', Times, serif"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- logInMODAL -->
+      <div class="modal" id="modal1">
+        <div class="modal-content" style="text-align: center">
+          <div class="ghusedoSabKuch">
+            <div class="cross"><span class="closehehe">&times;</span></div>
+            <br /><br />
+            <h4
+              style="font-family: 'Times New Roman', Times, serif"
+              class="LoginText"
+            >
+              logIn
+            </h4>
+            <input
+              class="inputOff"
+              type="email"
+              id="loginEmail"
+              placeholder="enter your email"
+              style="font-family: 'Times New Roman', Times, serif"
+            /><br /><br />
+            <input
+              class="inputOff"
+              type="password"
+              id="loginPassword"
+              placeholder="enter your password"
+              style="font-family: 'Times New Roman', Times, serif"
+            /><br /><br /><br /><br /><br /><br />
+            <button
+              class="btnsub submit1"
+              type="submit"
+              style="font-family: 'Times New Roman', Times, serif"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="" style="height: 100%">
+      <div class="page pageTest full-width content-grid active">
+        <div id="testConfig" class="full-width">
+          <div class="row">
+            <div class="timee">
+              <button class="textButton timeu selectedd" id="30">30</button>
+              <button class="textButton timeu" id="60">60</button>
+              <button class="textButton timeu" id="120">120</button>
+            </div>
+            <div class="separation"></div>
+            <div class="texxxt">Select Your Stats from here.</div>
+            <div class="separation"></div>
+            <div class="difficulty">
+              <button class="textButton diffi selectedd" id="easy">easy</button>
+              <button class="textButton diffi" id="medium">medium</button>
+              <button class="textButton diffi" id="hard">hard</button>
+            </div>
+          </div>
+        </div>
+        <div id="spacegiver" style="height: 47.5px">
+          <div id="capsWarning" class="hidden" style="display: none">
+            <i class="fas fa-lock" style="background-color: #f9c700"></i>
+            Caps Lock
+          </div>
+        </div>
+        <div
+          id="liveStats"
+          class="full-width timerMain"
+          style="font-size: 2rem; opacity: 1"
+        >
+          <div class="time hiddennn" style="color: transparent; padding-left: 10px;">time</div>
+        </div>
+        <div
+          id="typingTest"
+          class="content-grid content"
+          style="font-size: 2rem; max-width: 100%; opacity: 1"
+        >
+          <!-- <div id="capsWarning" class="hidden" style="display: none;">
+                    <i class="fas fa-lock" style="background-color: #F9C700;"></i>
+                    Caps Lock 
+                </div> -->
+          <div
+            id="wordsWrapper"
+            class="new"
+            style="
+              overflow: visible clip;
+              height: 170px;
+              padding-left: 70px;
+              padding-right: 40px;
+            "
+          >
+            <!-- <div id="liveStats" class="full-width timerMain" style="font-size: 2rem; opacity: 1;">
+                        <div class="time hiddennn" style="opacity: 0;">hi</div>
+                    </div> -->
+            <input
+              id="wordsInput"
+              class="full-width"
+              type="text"
+              autocomplete="off"
+              autocapitalize="off"
+              autocorrect="off"
+              data-gramm="false"
+              data-gramm_editor="false"
+              data-enable_grammarly="false"
+              spellcheck="false"
+              list="autocompleteOff"
+              style="
+                font-size: 2rem;
+                top: 61px;
+                left: 10px;
+                width: 38px;
+                background-color: aliceblue;
+              "
+            />
+            <div id="cursor"></div>
+            <div
+              class="outOfFocusWarning"
+              style="margin-top: 370px; font-size: 1.5rem"
+            >
+              <i class="fa-solid fa-computer-mouse"></i>
+              Click anyehere to focus
+            </div>
+            <div
+              id="words"
+              class="full-width highlight-leter blurred"
+              style="
+                margin-left: unset;
+                overflow: visible clip;
+                transition: 0s;
+                font-size: 2.7rem;
+              "
+            ></div>
+          </div>
+          <!-- <div class="gap" style="height: 10px;"></div> -->
+          <button
+            id="restartTestButton"
+            aria-label="Restart Test"
+            data-baloon-pos="down"
+            class="text restart"
+          >
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+        <div id="result" class="hidden" tabindex="0">
+          <div class="wrapper" style="height: 100%; width: 80vw; padding: 20px 20px;">
+            <div class="statss" style="display: inline;">
+                <div class="wpm" style="font-size: 3rem;">WPM</div>
+                <div class="accuracy" style="font-size: 3rem;">Accuracy</div>
+            </div>
+            <div class="morestats statss">
+                <div class="timetaken" style="font-size: 2rem;">Time Taken</div>
+                
+            </div>
+            <div class="bottom"><button class="restarttt">Restart game</div></div>
+          </div>
+          <div class="full-width" style="margin-top: 1rem"></div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+    <script src="typing.js"></script>
+    <script src="timeAndDifficulty.js"></script>
+    <script>
+        // let UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+        // let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+        // let logOutBttn = document.querySelector(".logOutHidden2"); 
+        // // logOutBttn.onclick=lOgout();
+        // // function lOgout() {
+        // //     sessionStorage.removeItem("user-creds");
+        // //     sessionStorage.removeItem("user-info");
+        // //     window.location.href = 'index.html';
+        // // }
+        // let checkCred = () => {
+        //     if(!sessionStorage.getItem("user-creds"))
+        //     {
+        //         //kaam assign kar denge!
+        //     }
+        //     else
+        //     {
+
+        //     }
+        // }
+
+        // window.addEventListener('load', checkCred);
+        
+    </script>
+  </body>
+</html>
